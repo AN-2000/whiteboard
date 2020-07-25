@@ -1,0 +1,158 @@
+/* agr kisi element ko absolute krte ho position me wo root se lega and if agr wo kisi ka child h use relative krke absolute krte ho to wo whase absolute hoga */
+
+
+.icons{
+    height: 5rem;
+    width: 5rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+.tools{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+}
+
+.active{
+    padding: 1rem;
+    border-radius: 3.5rem;
+    background-color: grey;
+}
+
+.blue,.red,.black{
+    width: 2.2rem;
+    height: 98%;
+    border-radius: 100%;
+}
+
+.min{
+background-color: #76ff76;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.black{
+    background-color: black;
+}
+
+.red,.close{
+    background-color: red;
+}
+
+.pencil-options{
+    height: 5rem;
+    width: 10rem;
+    background-color: chocolate;
+    display:none;
+}
+
+.pencil-slider,.pencil-colors{
+    height: 50%;
+    width: 10rem;
+}
+
+.pencil-colors{
+    padding: 0.1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color:darksalmon;
+}
+
+.pencil-slider{
+    background-color:aliceblue;
+}
+
+
+
+.eraser-options{
+    height:2.5rem;
+    width: 10rem;
+    background-color: chocolate;
+    display: none;
+}
+
+.eraser-slider{
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+
+
+}
+
+
+
+
+
+ .pencil,.eraser{
+    position: relative;
+}
+
+.pencil-options,.eraser-options{
+    position: absolute;
+    top: 104%;
+    left: 0rem;
+} 
+
+.sticky2{
+    height: 15rem;
+    width: 16rem;
+    position: absolute;
+    left: 35rem;
+    top: 15rem;
+}
+.top{
+    width: 100%;
+    height: 2.2rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #7e7e7e;
+    border-top-right-radius: 1.5rem; 
+    /* rem me doge to mst curve aiga percent me doge to ni aiga */
+}
+
+.bottom{
+    width: 100%;
+    height: 18rem;
+    background-color: #ffff4d;
+}
+
+.min,.close{
+    
+    width: 1.5rem;
+    height: 122%;
+    border-radius: 100%;
+    margin-left: .2rem;
+}
+
+.chooseFile{
+    display: none;
+    position:absolute;
+    height: 2rem;
+    width: 12rem;
+    background-color: red;
+}
+
+
+.show{
+    display: block;
+}
+
+.imgStyle{
+    height: 14rem;
+    width: 16rem;
+}
+
+
+.alignSlider{
+    text-align: center;
+    padding-top: 0.8rem;
+}

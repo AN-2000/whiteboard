@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+        
+    
+    
+</head>
+<body>
+
+    <div class="tools">
+            <div class="pencil">
+                    <img src="whiteboard-master/NewIcons/Black_Pencil.svg" alt="sada" class="icons" id="pencil">
+                    <div class="pencil-options">
+                        <div class="pencil-slider alignSlider">
+                                <input type="range" min="2" max="60" id="PencilSlider" value="2" oninput="changeWidth(this.value)" >
+                        </div>
+                        <div class="pencil-colors">
+                            <div class="blue" onclick="penColor('blue')"></div>
+                            <div class="red" onclick="penColor('red')"></div>
+                            <div class="black" onclick="penColor('black')"></div>
+                        </div>
+                    </div>
+            </div>
+         
+        
+            <div class="eraser">
+                    <img src="whiteboard-master/NewIcons/Eraser.svg" alt="dsfsd" class="icons" id="eraser">
+                <div class="eraser-options">
+                    <div class="eraser-slider alignSlider" >
+                        <input type="range" min="2" id="EraserSlider" max="60" value="2" oninput="changeWidth(this.value)" >
+                    </div>
+                </div>
+            </div>
+            <div class="stickyNote">
+                <img src="whiteboard-master/NewIcons/StickyNote.svg" alt="sada" class="icons"  id="note">
+            </div>
+            <div class="upload">
+                <a href="" id="fileSelector">
+                    <img src="whiteboard-master/NewIcons/Photo.svg" alt="sada" class="icons" id="upload" >
+                </a>
+               
+                <div class="chooseFile">
+                    <input type="File" id = "fileInput" accept="image/*">
+                </div>
+            </div>
+            
+            <div class="download">
+                <img src="whiteboard-master/NewIcons/Download.svg" alt="sada" class="icons">
+            </div>
+            
+            <div class="undo">
+                <img src="whiteboard-master/NewIcons/Undo.svg" alt="sada" class="icons" >
+            </div>
+            
+            <div class="redo">
+                <img src="whiteboard-master/NewIcons/Redo.svg" alt="sada" class="icons" >
+            </div>
+            
+    </div>
+    
+
+    <canvas class="board">
+            
+    </canvas>
+    <!-- <div class="sticky2">
+            <div class="top">
+                <div class="min"></div>
+                <div class="close"></div>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" class="bottom"></textarea>
+        </div> -->
+
+    <!-- div ko htade canvas chl jaiga -->
+
+    <script> 
+        var board = document.querySelector(".board")
+        board.height = window.innerHeight
+        board.width = window.innerWidth
+        var ctx = board.getContext("2d")
+        ctx.strokeStyle="red"
+    </script>
+
+    <script src="script3.js"></script>
+    <script src="sticky.js"></script>
+    <script src="upload.js"></script>
+    <script src="download.js"></script>
+</body>
+</html>
